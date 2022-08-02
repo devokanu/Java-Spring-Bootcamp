@@ -1,0 +1,16 @@
+Project info : com.okan.patika.0.0.1-SNAPSHOT
+Developers : 
+	Developer 1 Name : Okan Yörükoğlu 
+Dependencies : 
+	Dependency : junit.junit 
+Release Date : 20-06-2022
+Plugins : 
+	Plugin : summarize
+	Plugin : maven-clean-plugin
+	Plugin : maven-resources-plugin
+	Plugin : maven-jar-plugin
+	Plugin : maven-compiler-plugin
+	Plugin : maven-surefire-plugin
+	Plugin : maven-install-plugin
+	Plugin : maven-deploy-plugin
+	Plugin : maven-site-plugin
