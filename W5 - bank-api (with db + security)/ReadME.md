@@ -1,5 +1,16 @@
 # Banking API
 
+#### Login  
+
+```http
+POST /v1/auth/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `username`| `string` | **Required**. Username to login |
+| `password`| `string` | **Required**. Password to login |
+
 #### Create Account
 
 ```http
@@ -57,6 +68,16 @@ GET /v1/accounts/logs/{accountNumber}
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `accountNumber`| `string` | **Required**. Account number to show related logs |
+
+#### Delete Account 
+
+```http
+DELETE /v1/accounts/{accountNumber}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `accountNumber`| `string` | **Required**. Account number to delete account |
 
 
 #
