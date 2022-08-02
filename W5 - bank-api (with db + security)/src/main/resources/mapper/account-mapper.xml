@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.okan.bankapi.repository.BatisAccountRepository">
+
+	<select id="getAll"
+		resultType="com.okan.bankapi.model.Account">
+		SELECT * FROM accounts
+	</select>
+
+	<select id="getDetail"
+		resultType="com.okan.bankapi.model.Account">
+		SELECT * FROM accounts WHERE number = #{number}
+		
+	</select>
+
+	<insert id="create">
+		INSERT INTO accounts(id,name,surname,email,tc,type,number,balance,lastModified,isDeleted)
+		VALUES (#{id},#{name},#{surname},#{email},#{tc},#{type},#{number},#{balance},#{lastModified},#{isDeleted})
+		
+	</insert>
+
+	<update id="update">
+		UPDATE accounts SET balance = #{balance} , lastModified = #{lastModified} WHERE number = #{number}	
+	</update>
+
+	<update id="deleteAccount">
+		UPDATE accounts SET isDeleted = true , lastModified = #{lastModified} WHERE number = #{number}
+		
+	</update>
+
+
+</mapper>
